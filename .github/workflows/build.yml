@@ -11,10 +11,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
-          cache: "npm"
       - run: |
           npm install
-          npm run build:prod
+          npm run build
           npm test
         env:
           NODE_ENV: ${{ secrets.NODE_ENV }}
