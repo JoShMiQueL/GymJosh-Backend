@@ -9,6 +9,8 @@ const {
 } = require("../dist/esm/src/routes/config");
 
 beforeEach((done) => {
+  console.log(MONGO_HOST);
+  console.log(process.env.NODE_ENV);
   mongoose.connect(
     `mongodb://${
       MONGO_PASSWORD && `${MONGO_USER}:${MONGO_PASSWORD}@`
