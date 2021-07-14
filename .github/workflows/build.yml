@@ -7,10 +7,6 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-        env:
-          NODE_ENV: ${{ secrets.NODE_ENV }}
-          MONGO_HOST: ${{ secrets.MONGO_HOST }}
-          MONGO_DATABASE: ${{ secrets.MONGO_DATABASE }}
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
@@ -20,3 +16,7 @@ jobs:
           npm install
           npm run build
           npm test
+        env:
+          NODE_ENV: ${{ secrets.NODE_ENV }}
+          MONGO_HOST: ${{ secrets.MONGO_HOST }}
+          MONGO_DATABASE: ${{ secrets.MONGO_DATABASE }}
