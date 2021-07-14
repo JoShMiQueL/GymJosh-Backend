@@ -7,7 +7,7 @@ import root from "../../root";
 
 const app = express();
 
-app.set("port", process.env.SERVER_PORT);
+app.set("port", process.env.SERVER_PORT || 3001);
 app.use(express.static(path.join(root, "public")));
 app.use(morgan("dev"));
 app.use(cors());
