@@ -1,7 +1,6 @@
 import chalk from "chalk";
 import mongoose, { ConnectOptions } from "mongoose";
-const { MONGO_DATABASE, MONGO_HOST, MONGO_USER, MONGO_PASSWORD, NODE_ENV } =
-  require("./config")();
+const { MONGO_DATABASE, MONGO_HOST, MONGO_USER, MONGO_PASSWORD } = process.env;
 
 (async () => {
   const mongooseOptions: ConnectOptions = {

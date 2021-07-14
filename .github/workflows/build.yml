@@ -16,6 +16,7 @@ jobs:
       - name: Run Tests
         run: npm test
         env:
-          NODE_ENV: ${{ secrets.NODE_ENV }}
           MONGO_HOST: ${{ secrets.MONGO_HOST }}
           MONGO_DATABASE: ${{ secrets.MONGO_DATABASE }}
+          TEST_MONGO_DATABASE: ${{ secrets.TEST_MONGO_DATABASE }}
+          TEST_MONGO_HOST: ${{ secrets.TEST_MONGO_HOST }}

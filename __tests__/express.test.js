@@ -2,8 +2,7 @@ require("../dist/esm/src/util/environment");
 const { default: app } = require("../dist/esm/src/routes");
 const mongoose = require("mongoose");
 const supertest = require("supertest");
-const { MONGO_HOST, MONGO_USER, MONGO_PASSWORD } =
-  require("../dist/esm/src/routes/config")();
+const { MONGO_HOST, MONGO_USER, MONGO_PASSWORD } = process.env;
 const mongoURL = `mongodb://${
   MONGO_PASSWORD ? `${MONGO_USER}:${MONGO_PASSWORD}@` : ""
 }${MONGO_HOST}/JestDB`;

@@ -8,7 +8,7 @@
     "build": "rimraf dist && esbuild ./src --platform=node --bundle --outfile=dist/index.js && tsc",
     "start:dev": "cross-env NODE_ENV=development node ./dist",
     "start:prod": "node ./dist",
-    "test": "jest"
+    "test": "cross-env NODE_ENV=test jest"
   },
   "keywords": [],
   "author": "",

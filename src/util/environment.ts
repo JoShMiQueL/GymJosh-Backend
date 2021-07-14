@@ -2,7 +2,7 @@ import path from "path";
 import root from "../../root";
 import _ from "lodash";
 import chalk from "chalk";
-const { NODE_ENV } = require("../routes/config")();
+const { NODE_ENV } = process.env;
 import dotenv from "dotenv";
 
 if (NODE_ENV) {
