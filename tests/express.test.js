@@ -9,7 +9,7 @@ const {
 } = require("../dist/esm/src/routes/config");
 
 beforeEach((done) => {
-  console.log(MONGO_HOST);
+  console.log([...MONGO_HOST]);
   console.log(process.env.NODE_ENV);
   mongoose.connect(
     `mongodb://${
