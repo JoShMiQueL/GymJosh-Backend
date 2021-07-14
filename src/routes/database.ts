@@ -18,6 +18,7 @@ import {
   }${MONGO_HOST}/${MONGO_DATABASE}`;
   try {
     const db = await mongoose.connect(mongooseURL, mongooseOptions);
+    mongoose.Promise = global.Promise;
     console.log(
       chalk`{blue Database {white - Connected to {yellow ${db.connection.name}} database}}`
     );
