@@ -1,4 +1,4 @@
-import "./util/environment";
+process.env.NODE_ENV === "development" && require("./util/environment");
 import chalk from "chalk";
 import app from "./routes";
 import "./routes/database";

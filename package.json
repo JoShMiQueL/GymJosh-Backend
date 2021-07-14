@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon",
+    "dev": "cross-env NODE_ENV=development nodemon",
     "build": "rimraf dist && esbuild ./src --platform=node --bundle --outfile=dist/index.js && tsc",
-    "start": "node ./dist",
+    "start:dev": "cross-env NODE_ENV=development node ./dist",
+    "start:prod": "node ./dist",
     "test": "jest"
   },
   "keywords": [],
@@ -28,6 +29,7 @@
     "@types/morgan": "^1.9.3",
     "@types/node": "^16.3.2",
     "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
     "esbuild": "^0.12.15",
     "jest": "^27.0.6",
     "mongodb-client-encryption": "^1.2.6",
