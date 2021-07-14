@@ -1,7 +1,7 @@
-import "dotenv/config";
+import "./util/environment";
+import chalk from "chalk";
 import app from "./routes";
 import "./routes/database";
-import chalk from "chalk";
 
 app.listen(app.get("port"), () => {
   console.log(

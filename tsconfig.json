@@ -9,11 +9,14 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": false,
-    "module": "CommonJS",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "jsx": "react",
     "removeComments": true,
-    "noImplicitAny": false
-  }
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "outDir": "./dist/esm"
+  },
+  "include": ["src/**/*"]
 }
