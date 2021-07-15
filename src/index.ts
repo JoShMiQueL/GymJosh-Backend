@@ -1,11 +1,9 @@
-// import "./util/environment";
+import "./util/environment";
 import chalk from "chalk";
 import { AddressInfo } from "net";
 import app from "./routes";
 import { v4 } from "public-ip";
 import "./routes/database";
-
-console.log("src/index", process.env.NODE_ENV);
 
 const server = app.listen(app.get("port"), `0.0.0.0`, async () => {
   const host: AddressInfo = Object(server.address());

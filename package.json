@@ -7,7 +7,7 @@
     "dev": "cross-env NODE_ENV=development nodemon",
     "build": "rimraf dist && esbuild ./src --platform=node --bundle --outfile=dist/index.js && tsc",
     "start:dev": "cross-env NODE_ENV=development node ./dist",
-    "start:prod": "node ./dist",
+    "start:prod": "cross-env NODE_ENV=production node ./dist",
     "test": "cross-env NODE_ENV=test jest"
   },
   "keywords": [],
