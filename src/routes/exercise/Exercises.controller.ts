@@ -10,6 +10,7 @@ export const updateExercise: RequestHandler = async (
   const { id } = req.params;
   const { inc } = req.headers;
   try {
+    if (_.isNaN(Number(id))) return res.sendStatus(400);
     const doc = await ExerciseModel.find({ id });
     if (_.isEmpty(doc)) {
       return res.sendStatus(404);
@@ -63,6 +64,7 @@ export const deleteExercise: RequestHandler = async (
 ) => {
   const { id } = req.params;
   try {
+    if (_.isNaN(Number(id))) return res.sendStatus(400);
     const doc = await ExerciseModel.deleteOne({ id });
     if (doc.ok) {
       return res.status(200).json({
