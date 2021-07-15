@@ -1,5 +1,5 @@
-require("../dist/esm/src/util/environment");
-const { default: app } = require("../dist/esm/src/routes");
+require("../dist/backend/esm/src/util/environment");
+const { default: app } = require("../dist/backend/esm/src/routes");
 const mongoose = require("mongoose");
 const supertest = require("supertest");
 const { MONGO_HOST, MONGO_USER, MONGO_PASSWORD } = process.env;
