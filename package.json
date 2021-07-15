@@ -5,15 +5,17 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon",
-    "build": "rimraf dist && esbuild ./src --platform=node --bundle --outfile=dist/index.js && tsc",
+    "build": "rimraf dist && esbuild ./src --platform=node --bundle --outfile=dist/index.js && npm run front && tsc",
     "start:dev": "cross-env NODE_ENV=development node ./dist",
     "start": "cross-env NODE_ENV=production node ./dist",
-    "test": "cross-env NODE_ENV=test jest"
+    "test": "cross-env NODE_ENV=test jest",
+    "front": "rimraf dist/front && esbuild ./public/script.js --bundle --outfile=dist/front/script.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "chalk": "^4.1.1",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
