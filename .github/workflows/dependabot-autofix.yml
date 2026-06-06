@@ -23,7 +23,7 @@ jobs:
 
       - name: Force fix vulnerabilities
         run: |
-          npm audit fix --force --ignore-scripts
+          npm audit fix --force --ignore-scripts || true
 
       - name: Create Pull Request with fixes
         uses: peter-evans/create-pull-request@v6
